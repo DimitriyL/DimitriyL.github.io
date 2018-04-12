@@ -9,9 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    {% block header %}
     <title>Introduction to Graph Databases</title>
-    {% endblock %}
 
     <!-- Bootstrap 
     <link href="css/bootstrap.min.css" rel="stylesheet">-->
@@ -101,7 +99,6 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    {% block jumbotron %}
     <div class="jumbotron">
       <h1>Graph Databases</h1>
       <p>By Dimitriy Leksanov</p>
@@ -111,10 +108,6 @@
 	</form>
       </p>
     </div>
-    {% endblock %}
-
-    {% block body %}
-    {% endblock %}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -123,7 +116,244 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <!--Basics Section-->
+    <h3>What is a graph database?</h3>
+    Uses graph structure to store data, in the form of nodes, edges, and proper\
+ties<br>
+    Underlying structures vary between databases<br>
+    Much like relational databases, graph databases rely on a query language (e\
+.g. Cypher) to look up information<br>
+    <br>
 
+    <h3>Why use them at all?</h3>
+    Significantly more efficient querying process<br>
+    Links and properties thereof are stored logically within the database<br>
+
+    <h3>Graph Database Basics</h3>
+    Data is stored in three major types of containers: nodes, edges, and proper\
+ties<br>
+
+    <h3>Nodes</h3>
+    Nodes represent “things” or “entities,” such as people, actors, movies, etc\
+.<br>
+    Used to store all information about the entity, much like a row of data in \
+SQLite<br>
+    Represented by colorful balls<br>
+    <img src="https://api.ning.com/files/ZZRe-BUg83nCk3kGButZST1xgey1F7u9Z0fPlI\
+lZ-oWuiyRgWgfKwjfwLQvYrCeeHnqpaFYbceP84fxpVgC8Thlxiiv2eZXo/graphDB.png" height=\
+"400" width="500">
+
+    <h3>Edges</h3>
+    Edges represent relationships between nodes<br>
+    The direction of an edge denotes how nodes relate to one another<br>
+    There can be multiple edges between nodes<br>
+    <br>
+    <img src="https://i.stack.imgur.com/YJeQg.png" height="400" width="400">
+
+    <h3>Properties</h3>
+    Properties are key-value pairs that encompass the information or attributes\
+ assigned to nodes and edges<br>
+    <br>
+    In nodes: these can be basic characteristics<br>
+    In edges: these describe the nature of the relationship (e.g. Uber ratings)\
+<br>
+
+    <h3>Different Graph Databases and Query Languages</h3>
+    Notable databases: GraphDB, ArangoDB, Neo4j, DataStax<br>
+    Notable query languages: Cypher, Gremlin, SPARQL<br>
+    These languages are standardized among numerous databases, and are imperati\
+ve for data lookup<br>
+    <img src="https://neo4j.com/wp-content/themes/neo4jweb/assets/images/neo4j-
+logo-2015.png" height="200" width="200" id="lineup">
+    <img src="https://qph.fs.quoracdn.net/main-thumb-t-26441-200-vE98dRkk2ptvXu
+1d6LPvjregVaxdlNKb.jpeg" height="200" width="200" id="lineup">
+    <img src="https://secure.meetupstatic.com/photos/event/4/1/f/6/600_45913688
+6.jpeg" height="200" width="200" id="lineup">
+    <img src="https://raw.githubusercontent.com/apache/incubator-tinkerpop/mast
+er/docs/static/images/gremlin-apache.png" height="200" width="200" id="lineup">
+
+
+    <!--End of Basics Section-->
+
+    <!--Neo4j Section -->
+    <img src="http://3.bp.blogspot.com/-rSv4MoRS52o/Vi-dBcqQtHI/AAAAAAAADM0/BvM\
+CC0-6FhI/s1600/Neo4j.png" width="600" height="400">
+
+    <br><br>
+    <h3>Introduction to Neo4j</h3>
+    Popular graph database management system<br>
+    Uses the Cypher query language to add, retrieve, and remove data points<br>
+    Implemented using Java<br>
+    Meets the standards of ACID (Atomicity, Consistency, Isolation, Durability)\
+<br>
+    From the official neo4j website, <a href="https://neo4j.com/blog/acid-vs-ba\
+se-consistency-models-explained/">neo4j.com</a>:
+    <br>
+    <p id="bullets">
+      Atomic: All operations in a transaction succeed or every operation is rol\
+led back.<br>
+      Consistent: On the completion of a transaction, the database is structura\
+lly sound.<br>
+      Isolated: Transactions do not contend with one another. Contentious acces\
+s to data is moderated by the database so that transactions appear to run seque\
+ntially.<br>
+      Durable: The results of applying a transaction are permanent, even in the\
+ presence of failures.<br>
+    </p>
+
+    <h3>Getting Started</h3>
+    1. Install and download off of neo4j.com<br>
+    2. Launch the program and create a new project<br>
+    3. Click “Open Browser” to open a new window to toggle with the database<br\
+>
+    4. Proceed, either with tutorials or by writing original Cypher code<br><br\
+>
+    <img src="https://camo.githubusercontent.com/cb5269e984ebcbbae3c17784edf8a2
+040fcde66e/687474703a2f2f692e696d6775722e636f6d2f4d4e36657a59612e706e67" width="800" height="400">
+
+    <br>
+    <!-- End of Neo4j Section-->
+
+    <!-- Cypher Section-->
+    <h3>Basics of Cypher</h3>
+    For basic use of Cypher and Neo4j, there are six main key words to know: CREATE, MATCH, RETURN, WHERE, DETACH, and DELETE<br>
+
+    <h3>CREATEing Nodes and Assigning Properties</h3>
+    Use the keyword CREATE, and place all information within the ensuing parentheses ()<br>
+    All attributes will go inside the {}, much like a dictionary<br>
+    <br>
+    <code>
+      CREATE (LanaW:Person {name:'Lana Wachowski', born:1965})
+    </code>
+    <br>
+    <code>
+      CREATE (TheMatrixReloaded:Movie {title:'The Matrix Reloaded', released:2003, tagline:'Free your mind'})
+    </code>
+    <br><br>
+    The first key-value pair represents the Node’s label, formatted as (Label_Identity):(Label_Category)<br>
+    <img src="https://techietweak.files.wordpress.com/2016/01/04-graphdbv1.jpg" height="400" width="550">
+
+    <h3>Labeling</h3>
+    Essentially, labels are categories for nodes<br>
+    A node’s label will determine the color of the node<br>
+    Much easier to distinguish in visual form<br>
+    Ex: Movie→ Green; Actor → Blue<br><br>
+    <img src="https://www.codeproject.com/KB/NoSQL/1066378/Movies.PNG" width="400" height="400">
+
+    <h3>CREATEing Edges Between Nodes</h3>
+    Relationships are formed by larger code blocks:<br>
+    <br>
+    <code>
+      CREATE<br>
+    </code>
+    <code id="bullets">
+      (Keanu)-[:ACTED_IN {roles:['Neo']}]->(TheMatrix),<br>
+      (Carrie)-[:ACTED_IN {roles:['Trinity']}]->(TheMatrix),<br>
+      (LillyW)-[:DIRECTED]->(TheMatrix)<br>
+    </code>
+    <br>
+
+    Nodes go within the parentheses <code>()</code><br>
+    Relationships themselves go within the brackets <code>[]</code><br>
+    Relationship labels: begin with : and are visible; properties go inside the <code>{}</code> and are not visible<br>
+    <code>-></code> used to denote the direction of the edge<br>
+
+    <h3>Querying for Data</h3>
+    Use MATCH to find a node via a single property<br><br>
+    <code>
+      MATCH (tom {name: "Tom Hanks"}) RETURN tom
+    </code>
+    <br><br>
+    Use WHILE to narrow down a query:<br><br>
+    <code>
+      MATCH (nineties:Movie) WHERE nineties.released >= 1990 AND nineties.released <= 2000 RETURN nineties.title
+    </code>
+    <br><br>
+    <img src="https://blogs.sequoiainc.com/content/images/2017/07/create.png" width="800" height="300"><br><br>
+    “tom” and “nineties” are placeholder variables, either for a node’s label (“tom”) or a collection of nodes (“nineties”)<br>
+    Here, the criterion is that each Movie in the "nineties" collection must have been "released" in the 1990s
+    RETURN will print either a property, or the full node, as required<br>
+    In this case, RETURN will print the list the titles of all movies released in the 1990s
+
+
+    <h3>More Advanced Searching</h3>
+    To shorten a list of results to a specific quantity, use LIMIT: <br>
+    <br>
+    <code>
+      MATCH (nineties:Movie) WHERE nineties.released >= 1990 AND nineties.released <= 2000 RETURN nineties.title LIMIT 10
+    </code>
+    <br><br>
+    Here, the list of titles displayed will only be 10 items long, at most
+
+    <br><br>
+    An example of a different query list:<br>
+    <img src="http://i.imgur.com/yz11GjA.png" width="500" height="250">
+
+    <h3>Finish by Removing Connections</h3>
+    To clear the database, first remove edges and the relationships they correspond to using DETACH<br>
+    Then, remove nodes using DELETE<br>
+    These can be consolidated into one command:<br><br>
+    <code>
+      MATCH (n) DETACH DELETE n
+    </code>
+    <br><br>
+
+    <!-- End of Cypher Section-->
+
+    <!-- Other Section -->
+    <h3>Alternate Ways to View Data</h3>
+    In the browser, one can view the data in four different ways: Graph, Table,  Text, and Code<br>
+    <p id="bullets">
+      Graph:<br><br><img src="http://markhneedham.com/blog//uploads/2015/04/graph-13.png" width="400" height="250"><br><br>
+      Table:<br><br><img src="http://blog.rguha.net/wp-content/uploads/2015/11/table.png" width="450" height="250"><br><br>
+      Text (more or less):<br><br><img src="https://zeroturnaround.com/wp-content/uploads/2015/06/neo4j-character-match-query.jpg" width="700" height="250"><br><br>
+      Code (not neo4j, but very similar format):<br><br><img src="https://vsoch.github.io/assets/images/posts/cogat-neo4j/view_source.png" width="450" height="250"><br><br>
+    </p>
+    <h3>Implementing Cypher Through Drivers</h3>
+    In order to create and update graph databases, a developed can use drivers<br>
+    In Neo4j, there are drivers for Java, JavaScript, Python, and .NET<br>
+    To begin, install the driver (for Python, use pip):<br>
+    <br>
+    <code>
+      $ pip install neo4j-driver
+    </code><br><br>
+    Then, running the Python driver is very similar to using Python for SQLite…<br><br>
+    <code>
+      from flask import Flask, g, Response, request<br>
+      from neo4j.v1 import GraphDatabase, basic_auth<br>
+    </code>
+    <br>
+
+    Then, in your python functions:
+    <br><br>
+
+    <code>
+      def add_person(self, name):<br>
+        with self.__driver.session() as session:<br>
+          session.run("CREATE (a:Person {name: $name})", name=name)
+    </code>
+    <br><br>
+
+    … Import necessary libraries, then use Strings to query<br>
+
+
+    <h3>Open-Source Examples</h3>
+    The movie example that I used is readily available in the browser as soon as you open it<br>
+    However, for examples of the same movie database example, created using a driver, use the plentiful repositories on the <a href="https://github.com/neo4j-examples">“Neo4j Exampl\
+es” GitHub:<a/><br>
+    <br><img src="http://jexp.github.io/blog/img/git2neo/git2neo.jpg" width="600" height="200">
+    <br>
+
+    <!-- End of Other Section-->
+
+    <h3>Sources Used, Amongst Others:<br>
+        <a href="https://www.youtube.com/watch?v=vJcxRjJ982k">DataStax</a><br>
+        <a href="https://github.com/neo4j-examples">Open Source Examples</a><br>
+        <a href="https://neo4j.com/docs/developer-manual/3.2/drivers/sessions-transactions/">Driver Information</a><br>
+        <a href="https://neo4j.com/download/">Download Page</a><br>
+        <a href="https://neo4j.com/blog/acid-vs-base-consistency-models-explained/">Explanation of ACID</a><br>
+    </h3>
+    <br>
 
   </body>
 </html>
