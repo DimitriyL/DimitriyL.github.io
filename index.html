@@ -29,6 +29,10 @@
 
 
     <style>
+      body{
+        padding-left: 10px;
+      }
+
       p {
         padding-left: 70px;
         padding-top: 30px;
@@ -78,9 +82,7 @@
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	  <ul class="nav navbar-nav">
-	    <form class="navbar-form navbar-left" action="/basics">
-	      <button type="submit" class="btn btn-default">Basics of Graph Databases</button>
-	    </form>
+	    <a href="#basics">Basics</a>
 	    <form class="navbar-form navbar-left" action="/neo">
 	      <button type="submit" class="btn btn-default">Neo4j Overview</button>
 	    </form>
@@ -102,11 +104,6 @@
     <div class="jumbotron">
       <h1>Graph Databases</h1>
       <p>By Dimitriy Leksanov</p>
-      <p>
-	<form action="/basics">
-	  <button type="submit" class="btn btn-primary btn-lg">Continue</button>
-	</form>
-      </p>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -117,62 +114,59 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!--Basics Section-->
-    <h3>What is a graph database?</h3>
-    Uses graph structure to store data, in the form of nodes, edges, and proper\
-ties<br>
-    Underlying structures vary between databases<br>
-    Much like relational databases, graph databases rely on a query language (e\
-.g. Cypher) to look up information<br>
-    <br>
-
-    <h3>Why use them at all?</h3>
-    Significantly more efficient querying process<br>
-    Links and properties thereof are stored logically within the database<br>
-
-    <h3>Graph Database Basics</h3>
-    Data is stored in three major types of containers: nodes, edges, and proper\
-ties<br>
-
-    <h3>Nodes</h3>
-    Nodes represent “things” or “entities,” such as people, actors, movies, etc\
+    <div id="basics">
+      <h3>What is a graph database?</h3>
+      Uses graph structure to store data, in the form of nodes, edges, and proper\
+      ties<br>
+      Underlying structures vary between databases<br>
+      Much like relational databases, graph databases rely on a query language (e\
+      .g. Cypher) to look up information<br>
+      <br>
+      
+      <h3>Why use them at all?</h3>
+      Significantly more efficient querying process<br>
+      Links and properties thereof are stored logically within the database<br>
+      
+      <h3>Graph Database Basics</h3>
+      Data is stored in three major types of containers: nodes, edges, and proper\
+      ties<br>
+      
+      <h3>Nodes</h3>
+      Nodes represent “things” or “entities,” such as people, actors, movies, etc\
 .<br>
-    Used to store all information about the entity, much like a row of data in \
-SQLite<br>
-    Represented by colorful balls<br>
-    <img src="https://api.ning.com/files/ZZRe-BUg83nCk3kGButZST1xgey1F7u9Z0fPlI\
-lZ-oWuiyRgWgfKwjfwLQvYrCeeHnqpaFYbceP84fxpVgC8Thlxiiv2eZXo/graphDB.png" height=\
-"400" width="500">
-
-    <h3>Edges</h3>
-    Edges represent relationships between nodes<br>
-    The direction of an edge denotes how nodes relate to one another<br>
-    There can be multiple edges between nodes<br>
-    <br>
-    <img src="https://i.stack.imgur.com/YJeQg.png" height="400" width="400">
-
-    <h3>Properties</h3>
-    Properties are key-value pairs that encompass the information or attributes\
- assigned to nodes and edges<br>
-    <br>
-    In nodes: these can be basic characteristics<br>
-    In edges: these describe the nature of the relationship (e.g. Uber ratings)\
-<br>
-
-    <h3>Different Graph Databases and Query Languages</h3>
-    Notable databases: GraphDB, ArangoDB, Neo4j, DataStax<br>
-    Notable query languages: Cypher, Gremlin, SPARQL<br>
-    These languages are standardized among numerous databases, and are imperati\
-ve for data lookup<br>
-    <img src="https://neo4j.com/wp-content/themes/neo4jweb/assets/images/neo4j-
-logo-2015.png" height="200" width="200" id="lineup">
-    <img src="https://qph.fs.quoracdn.net/main-thumb-t-26441-200-vE98dRkk2ptvXu
-1d6LPvjregVaxdlNKb.jpeg" height="200" width="200" id="lineup">
-    <img src="https://secure.meetupstatic.com/photos/event/4/1/f/6/600_45913688
-6.jpeg" height="200" width="200" id="lineup">
-    <img src="https://raw.githubusercontent.com/apache/incubator-tinkerpop/mast
-er/docs/static/images/gremlin-apache.png" height="200" width="200" id="lineup">
-
-
+      Used to store all information about the entity, much like a row of data in \
+      SQLite<br>
+      Represented by colorful balls<br>
+      <img src="https://api.ning.com/files/ZZRe-BUg83nCk3kGButZST1xgey1F7u9Z0fPlI\
+		lZ-oWuiyRgWgfKwjfwLQvYrCeeHnqpaFYbceP84fxpVgC8Thlxiiv2eZXo/graphDB.png" height=\
+	   "400" width="500">
+      
+      <h3>Edges</h3>
+      Edges represent relationships between nodes<br>
+      The direction of an edge denotes how nodes relate to one another<br>
+      There can be multiple edges between nodes<br>
+      <br>
+      <img src="https://i.stack.imgur.com/YJeQg.png" height="400" width="400">
+      
+      <h3>Properties</h3>
+      Properties are key-value pairs that encompass the information or attributes\
+      assigned to nodes and edges<br>
+      <br>
+      In nodes: these can be basic characteristics<br>
+      In edges: these describe the nature of the relationship (e.g. Uber ratings)\
+      <br>
+      
+      <h3>Different Graph Databases and Query Languages</h3>
+      Notable databases: GraphDB, ArangoDB, Neo4j, DataStax<br>
+      Notable query languages: Cypher, Gremlin, SPARQL<br>
+      These languages are standardized among numerous databases, and are imperati\
+      ve for data lookup<br>
+      <img src="https://neo4j.com/wp-content/themes/neo4jweb/assets/images/neo4j-logo-2015.png" height="200" width="200" id="lineup">
+      <img src="https://qph.fs.quoracdn.net/main-thumb-t-26441-200-vE98dRkk2ptvXu1d6LPvjregVaxdlNKb.jpeg" height="200" width="200" id="lineup">
+      <img src="https://secure.meetupstatic.com/photos/event/4/1/f/6/600_459136886.jpeg" height="200" width="200" id="lineup">
+      <img src="https://raw.githubusercontent.com/apache/incubator-tinkerpop/master/docs/static/images/gremlin-apache.png" height="200" width="200" id="lineup">
+    </div>
+    
     <!--End of Basics Section-->
 
     <!--Neo4j Section -->
