@@ -82,9 +82,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
 	  </button>
-	  <form class="navbar-form navbar-left" action="/">
-	    <button type="submit" class="btn btn-primary">Home</button>
-	  </form>
+	  <a href="body" class="btn-primary">Top</a>
 	</div>
 	
 	<!-- Collect the nav links, forms, and other content for toggling -->
@@ -116,11 +114,9 @@
     <!--Basics Section-->
     <div id="basics">
       <h3>What is a graph database?</h3>
-      Uses graph structure to store data, in the form of nodes, edges, and proper\
-      ties<br>
+      Uses graph structure to store data, in the form of nodes, edges, and properties<br>
       Underlying structures vary between databases<br>
-      Much like relational databases, graph databases rely on a query language (e\
-      .g. Cypher) to look up information<br>
+      Much like relational databases, graph databases rely on a query language (e.g. Cypher) to look up information<br>
       <br>
       
       <h3>Why use them at all?</h3>
@@ -128,14 +124,11 @@
       Links and properties thereof are stored logically within the database<br>
       
       <h3>Graph Database Basics</h3>
-      Data is stored in three major types of containers: nodes, edges, and proper\
-      ties<br>
+      Data is stored in three major types of containers: nodes, edges, and properties<br>
       
       <h3>Nodes</h3>
-      Nodes represent “things” or “entities,” such as people, actors, movies, etc\
-.<br>
-      Used to store all information about the entity, much like a row of data in \
-      SQLite<br>
+      Nodes represent “things” or “entities,” such as people, actors, movies, etc.<br>
+      Used to store all information about the entity, much like a row of data in SQLite<br>
       Represented by colorful balls<br>
       <img src="https://api.ning.com/files/ZZRe-BUg83nCk3kGButZST1xgey1F7u9Z0fPlIlZ-oWuiyRgWgfKwjfwLQvYrCeeHnqpaFYbceP84fxpVgC8Thlxiiv2eZXo/graphDB.png" height="400" width="500">
       
@@ -147,18 +140,15 @@
       <img src="https://i.stack.imgur.com/YJeQg.png" height="400" width="400">
       
       <h3>Properties</h3>
-      Properties are key-value pairs that encompass the information or attributes\
-      assigned to nodes and edges<br>
+      Properties are key-value pairs that encompass the information or attributes assigned to nodes and edges<br>
       <br>
       In nodes: these can be basic characteristics<br>
-      In edges: these describe the nature of the relationship (e.g. Uber ratings)\
-      <br>
+      In edges: these describe the nature of the relationship (e.g. Uber ratings)<br>
       
       <h3>Different Graph Databases and Query Languages</h3>
       Notable databases: GraphDB, ArangoDB, Neo4j, DataStax<br>
       Notable query languages: Cypher, Gremlin, SPARQL<br>
-      These languages are standardized among numerous databases, and are imperati\
-      ve for data lookup<br>
+      These languages are standardized among numerous databases, and are imperative for data lookup<br>
       <img src="https://neo4j.com/wp-content/themes/neo4jweb/assets/images/neo4j-logo-2015.png" height="200" width="200" id="lineup">
       <img src="https://qph.fs.quoracdn.net/main-thumb-t-26441-200-vE98dRkk2ptvXu1d6LPvjregVaxdlNKb.jpeg" height="200" width="200" id="lineup">
       <img src="https://secure.meetupstatic.com/photos/event/4/1/f/6/600_459136886.jpeg" height="200" width="200" id="lineup">
@@ -177,30 +167,21 @@ CC0-6FhI/s1600/Neo4j.png" width="600" height="400">
     Popular graph database management system<br>
     Uses the Cypher query language to add, retrieve, and remove data points<br>
     Implemented using Java<br>
-    Meets the standards of ACID (Atomicity, Consistency, Isolation, Durability)\
-<br>
-    From the official neo4j website, <a href="https://neo4j.com/blog/acid-vs-ba\
-se-consistency-models-explained/">neo4j.com</a>:
+    Meets the standards of ACID (Atomicity, Consistency, Isolation, Durability)<br>
+    From the official neo4j website, <a href="https://neo4j.com/blog/acid-vs-base-consistency-models-explained/">neo4j.com</a>:
     <br>
     <p id="bullets">
-      Atomic: All operations in a transaction succeed or every operation is rol\
-led back.<br>
-      Consistent: On the completion of a transaction, the database is structura\
-lly sound.<br>
-      Isolated: Transactions do not contend with one another. Contentious acces\
-s to data is moderated by the database so that transactions appear to run seque\
-ntially.<br>
-      Durable: The results of applying a transaction are permanent, even in the\
- presence of failures.<br>
+      Atomic: All operations in a transaction succeed or every operation is rolled back.<br>
+      Consistent: On the completion of a transaction, the database is structurally sound.<br>
+      Isolated: Transactions do not contend with one another. Contentious access to data is moderated by the database so that transactions appear to run sequentially.<br>
+      Durable: The results of applying a transaction are permanent, even in the presence of failures.<br>
     </p>
 
     <h3>Getting Started</h3>
     1. Install and download off of neo4j.com<br>
     2. Launch the program and create a new project<br>
-    3. Click “Open Browser” to open a new window to toggle with the database<br\
->
-    4. Proceed, either with tutorials or by writing original Cypher code<br><br\
->
+    3. Click “Open Browser” to open a new window to toggle with the database<br>
+    4. Proceed, either with tutorials or by writing original Cypher code<br><br>
     <img src="https://camo.githubusercontent.com/cb5269e984ebcbbae3c17784edf8a2
 040fcde66e/687474703a2f2f692e696d6775722e636f6d2f4d4e36657a59612e706e67" width="800" height="400">
 
@@ -335,8 +316,7 @@ ntially.<br>
 
     <h3>Open-Source Examples</h3>
     The movie example that I used is readily available in the browser as soon as you open it<br>
-    However, for examples of the same movie database example, created using a driver, use the plentiful repositories on the <a href="https://github.com/neo4j-examples">“Neo4j Exampl\
-es” GitHub:<a/><br>
+    However, for examples of the same movie database example, created using a driver, use the plentiful repositories on the <a href="https://github.com/neo4j-examples">“Neo4j Examples” GitHub:<a/><br>
     <br><img src="http://jexp.github.io/blog/img/git2neo/git2neo.jpg" width="600" height="200">
     <br>
     </div>
