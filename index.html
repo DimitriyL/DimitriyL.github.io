@@ -82,19 +82,11 @@
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	  <ul class="nav navbar-nav">
-	    <a href="#basics">Basics</a>
-	    <form class="navbar-form navbar-left" action="/neo">
-	      <button type="submit" class="btn btn-default">Neo4j Overview</button>
-	    </form>
-	    <form class="navbar-form navbar-left" action="/cyph">
-	      <button type="submit" class="btn btn-default">Cypher Introduction</button>
-	    </form>
-	    <form class="navbar-form navbar-left" action="/other">
-	      <button type="submit" class="btn btn-default">Other Opportunities</button>
-	    </form>
-	    <form class="navbar-form navbar-left" action="/sources">
-	      <button type="submit" class="btn btn-default">Sources</button>
-	    </form>
+	    <a href="#basics">Basics of Graph Databases</a>
+	    <a href="#neo">Neo4j Overview</a>
+	    <a href="#cyph">Introduction to Cypher</a>
+	    <a href="#other">Other Information</a>
+	    <a href="#sources">Sources</a>
           </ul>
 
 	</div><!-- /.navbar-collapse /-->
@@ -170,6 +162,7 @@
     <!--End of Basics Section-->
 
     <!--Neo4j Section -->
+    <div id="neo">
     <img src="http://3.bp.blogspot.com/-rSv4MoRS52o/Vi-dBcqQtHI/AAAAAAAADM0/BvM\
 CC0-6FhI/s1600/Neo4j.png" width="600" height="400">
 
@@ -206,9 +199,11 @@ ntially.<br>
 040fcde66e/687474703a2f2f692e696d6775722e636f6d2f4d4e36657a59612e706e67" width="800" height="400">
 
     <br>
+    </div>
     <!-- End of Neo4j Section-->
 
     <!-- Cypher Section-->
+    <div id="cyph">
     <h3>Basics of Cypher</h3>
     For basic use of Cypher and Neo4j, there are six main key words to know: CREATE, MATCH, RETURN, WHERE, DETACH, and DELETE<br>
 
@@ -291,10 +286,11 @@ ntially.<br>
       MATCH (n) DETACH DELETE n
     </code>
     <br><br>
-
+    </div>
     <!-- End of Cypher Section-->
 
     <!-- Other Section -->
+    <div id="other">
     <h3>Alternate Ways to View Data</h3>
     In the browser, one can view the data in four different ways: Graph, Table,  Text, and Code<br>
     <p id="bullets">
@@ -337,9 +333,9 @@ ntially.<br>
 es” GitHub:<a/><br>
     <br><img src="http://jexp.github.io/blog/img/git2neo/git2neo.jpg" width="600" height="200">
     <br>
-
+    </div>
     <!-- End of Other Section-->
-
+    <div id="sources">
     <h3>Sources Used, Amongst Others:<br>
         <a href="https://www.youtube.com/watch?v=vJcxRjJ982k">DataStax</a><br>
         <a href="https://github.com/neo4j-examples">Open Source Examples</a><br>
@@ -348,6 +344,7 @@ es” GitHub:<a/><br>
         <a href="https://neo4j.com/blog/acid-vs-base-consistency-models-explained/">Explanation of ACID</a><br>
     </h3>
     <br>
+    </div>
 
   </body>
 </html>
